@@ -28,11 +28,21 @@ module.exports = {
   "rules": {
     "object-curly-spacing": ["error", "always"],
     "jsx-quotes": ["error", "prefer-double"],
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "key-spacing": ["error", { 
+      "beforeColon": false, 
+      "afterColon": true, 
+    }],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "block-spacing": ["error", "always"],
+    "max-len": ["error", { "code": 120 }],
+    "no-extra-semi": "error",
+    "semi": ["error", "always"],
+    "no-unreachable": "error"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
   }
-}
+};
