@@ -20,7 +20,11 @@ module.exports = {
     "react",
     "@typescript-eslint"
   ],
-  "ignorePatterns": ["*.test.js"],
+  "ignorePatterns": [
+    "**/*.test.js",
+    "*.css",
+    "*.svg"
+  ],
   "rules": {
     "object-curly-spacing": ["error", "always"],
     "jsx-quotes": ["error", "prefer-double"],

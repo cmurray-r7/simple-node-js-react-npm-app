@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Lint') {
             steps {
-                sh 'npx eslint ./src/*.js'
+                sh 'npx eslint ./src/*'
             }
         }
         // stage('Test') {
