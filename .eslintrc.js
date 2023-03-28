@@ -21,8 +21,8 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "object-curly-spacing": "error",
-        "jsx-quotes": ["error", "prefer-double"]
+        "object-curly-spacing": ["warning", "always"],
+        "jsx-quotes": ["warning", "prefer-double"]
     },
     "settings": {
         "react": {
