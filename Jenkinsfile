@@ -6,10 +6,14 @@ pipeline {
         }
     }
     stages {
-        stage('Build') { 
+        stage('Configure') { 
             steps {
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
+            }
+        }
+        stage('Lint') {
+            steps {
                 sh 'npx eslint ./src/*'
             }
         }
@@ -18,11 +22,9 @@ pipeline {
         //         sh './jenkins/scripts/test.sh'
         //     }
         // }
-        // stage('Deliver') {
+        // stage('Build') {
         //     steps {
-        //         sh './jenkins/scripts/deliver.sh'
-        //         input message: 'Finished using the web site? (Click "Proceed" to continue)'
-        //         sh './jenkins/scripts/kill.sh'
+        //         sh './jenkins/scripts/test.sh'
         //     }
         // }
     }
