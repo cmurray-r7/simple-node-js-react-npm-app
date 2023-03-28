@@ -22,8 +22,8 @@ module.exports = {
   ],
   "ignorePatterns": ["*.test.js"],
   "rules": {
-    "object-curly-spacing": ["warn", "always"],
-    "jsx-quotes": ["warn", "prefer-double"],
+    "object-curly-spacing": ["error", "always"],
+    "jsx-quotes": ["error", "prefer-double"],
     "indent": ["error", 2]
   },
   "settings": {

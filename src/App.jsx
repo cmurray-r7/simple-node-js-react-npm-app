@@ -8,7 +8,7 @@ const dummyObject = {
 
 function App() {
 
-  const { firstKey } = dummyObject;
+  const {firstKey} = dummyObject;
   
   return (
     <div className="App">
