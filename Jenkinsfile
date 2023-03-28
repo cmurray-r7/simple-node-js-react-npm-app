@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
-                sh 'npx eslint ./src/App.js'
+                sh 'npx eslint ./src/*'
             }
         }
         // stage('Test') {
