@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm run dev'
                 sh 'npx cypress run --config-file cypress.config.js --spec "cypress/e2e/0-demo/*"'
             }
         }
