@@ -20,11 +20,6 @@ module.exports = {
     "react",
     "@typescript-eslint"
   ],
-  "ignorePatterns": [
-    "**/*.test.js",
-    "*.css",
-    "*.svg"
-  ],
   "rules": {
     "object-curly-spacing": ["error", "always"],
     "jsx-quotes": ["error", "prefer-double"],
@@ -38,7 +33,8 @@ module.exports = {
     "max-len": ["error", { "code": 120 }],
     "no-extra-semi": "error",
     "semi": ["error", "always"],
-    "no-unreachable": "error"
+    "no-unreachable": "error",
+    "complexity": ["error", 4]
   },
   "settings": {
     "react": {

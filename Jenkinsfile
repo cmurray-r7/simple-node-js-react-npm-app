@@ -17,11 +17,12 @@ pipeline {
                 sh 'npx eslint ./src/*'
             }
         }
-        // stage('Test') {
-        //     steps {
-        //         sh './jenkins/scripts/test.sh'
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                sh 'npm run dev'
+                sh 'npx cypress run --config-file cypress.config.js --spec "cypress/e2e/0-demo/*"'
+            }
+        }
         // stage('Build') {
         //     steps {
         //         sh './jenkins/scripts/test.sh'
