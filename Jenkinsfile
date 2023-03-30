@@ -8,10 +8,6 @@ pipeline {
     stages {
         stage('Configure') { 
             steps {
-                sh 'apt install sudo'
-                sh 'usermod -aG sudo jenkins-admin'
-                sh 'usermod -aG wheel jenkins-admin'
-                sh 'sudo apt-get install xvfb'
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
             }
