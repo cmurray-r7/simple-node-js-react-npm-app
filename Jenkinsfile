@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Configure') { 
             steps {
-                sh 'apt-get install xvfb'
+                sh 'sudo apt-get install xvfb'
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
             }
