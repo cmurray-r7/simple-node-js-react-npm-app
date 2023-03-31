@@ -26,7 +26,7 @@ pipeline {
                 SUPPORT_ENGINEER_REFRESH_TOKEN = credentials('support-engineer-refresh-token')
             }
             steps {
-                sh('npx cypress run --config-file cypress.config.js --spec "cypress/e2e/0-demo/*" --env TEST_CLIENT_ID=$TEST_CLIENT_ID,TEST_CLIENT_SECRET=$TEST_CLIENT_SECRET,REFRESH_TOKEN=$REFRESH_TOKEN,SUPPORT_ENGINEER_REFRESH_TOKEN=$SUPPORT_ENGINEER_REFRESH_TOKEN')
+                sh("npx cypress run --config-file cypress.config.js --spec 'cypress/e2e/0-demo/*' --env TEST_CLIENT_ID=${TEST_CLIENT_ID},TEST_CLIENT_SECRET=${TEST_CLIENT_SECRET},REFRESH_TOKEN=${REFRESH_TOKEN},SUPPORT_ENGINEER_REFRESH_TOKEN=${SUPPORT_ENGINEER_REFRESH_TOKEN}")
             }
         }
         // stage('Build') {
