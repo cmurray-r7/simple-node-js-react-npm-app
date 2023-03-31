@@ -5,10 +5,10 @@ module.exports = defineConfig({
   sandbox: "r7--qa.sandbox.my.salesforce.com",
   e2e: {
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser, launchOptions) => {
-        launchOptions.extensions.push('/Users/cmurray/rapid7/rapid7-customer-success-extension/dist');
-        return launchOptions;
-      });
+      // on('before:browser:launch', (browser, launchOptions) => {
+      //   launchOptions.extensions.push('/Users/cmurray/rapid7/rapid7-customer-success-extension/dist');
+      //   return launchOptions;
+      // });
       config = dotenvPlugin(config, null, true);
       return config;
     },
