@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Configure') { 
             steps {
-                sh 'sudo apt-get update && sudo apt-get install -y zip'
+                sh 'apt-get update && apt-get install -y zip'
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
                 sh 'npx cypress install'
