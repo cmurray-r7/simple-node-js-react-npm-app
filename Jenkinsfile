@@ -32,8 +32,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh './ci/build.sh'
-                // Feature PR: patch version in package.json
-                // Release PR: minor version in package.json
                 // sh 'VERSION=$(npm view . version) && zip -r "build_${VERSION}.zip" dist' - will only work if zip is installed in cypress docker image
             }
         }
