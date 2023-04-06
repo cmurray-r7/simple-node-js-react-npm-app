@@ -2,7 +2,7 @@
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-TICKET_NUMBER="${BRANCH:0:2}"
+TICKET_NUMBER="${BRANCH:0:3}"
 REGEX='^[0-9]+$'
 
 if [ "$BRANCH" = "main" ]
