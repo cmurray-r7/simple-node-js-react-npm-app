@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Configure') { 
             steps {
-                sh 'apt-get install -y zip'
                 sh 'npm install' 
                 sh 'npx eslint --config ./.eslintrc.js'
                 sh 'npx cypress install'
@@ -35,8 +34,7 @@ pipeline {
 
                 // Feature PR: patch version in package.json
                 // Release PR: minor version in package.json
-                sh 'VERSION=$(npm view . version) && zip -r "build_${VERSION}.zip" dist'
-                sh 'ls'
+                // sh 'VERSION=$(npm view . version) && zip -r "build_${VERSION}.zip" dist' - will only work if zip is installed in cypress docker image
             }
         }
     }
